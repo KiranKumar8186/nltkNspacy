@@ -39,5 +39,3 @@ if text:
         for sent in summary:
             st.write("- " + sent)
 
-if st.button("Submit"):
-    st.write("Text summarized!")
