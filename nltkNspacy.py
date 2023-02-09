@@ -15,6 +15,7 @@ if text:
     summary_ratio = st.slider("Select the summary ratio (in %)", min_value=10, max_value=50, step=5, value=30)
 
     if library == "nltk":
+        nltk.download('punkt')
         sentences = sent_tokenize(text)
         total_sentences = len(sentences)
         summary_length = int(total_sentences * summary_ratio / 100)
