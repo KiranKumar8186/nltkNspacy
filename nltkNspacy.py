@@ -30,7 +30,7 @@ if text:
             st.write("- " + sent)
 
     elif library == "spacy":
-        spacy.download('en_core_web_sm')
+        
         nlp = spacy.load("en_core_web_sm")
         doc = nlp(text)
         summary_length = int(len(doc.sents) * summary_ratio / 100)
